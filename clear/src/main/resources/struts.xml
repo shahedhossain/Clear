@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="struts-default,json-default"
+		namespace="/">
+		<global-results>
+			<result name="error">/WEB-INF/jsp/error.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="error" />
+		</global-exception-mappings>
+	</package>
+	<constant name="struts.convention.default.parent.package"
+		value="default" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+	<constant name="struts.convention.result.path" value="/WEB-INF/jsp/" />
+
+	<!-- constant name="struts.custom.i18n.resources" value="global" />
+	<constant name="struts.enable.SlashesInActionNames" value="true" />
+	<constant name="struts.mapper.action.prefix.enabled" value="true" /-->
+	<!-- action name="come" class="com.study.pack.actions.LoginAction" method="execute"> 
+		<result name="success">/login.jsp</result> </action> <action name="welcome" 
+		class="com.study.pack.actions.UserAction" method="execute"> <result name="success">/result.jsp</result> 
+		</action -->
+</struts>
